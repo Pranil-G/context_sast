@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>context-sast</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wordmark">context&#8209;sast</div>
+      <div class="topbar-actions">
+        <span id="scan-status" class="scan-status">idle</span>
+        <button id="upload-trigger" class="upload-button" type="button">Upload APK</button>
+        <input id="apk-upload" type="file" accept=".apk,application/vnd.android.package-archive">
+      </div>
+    </header>
+
+    <main class="shell">
+      <section id="result-shell" class="result-shell hidden">
+        <section class="target">
+          <h1 id="package-name" class="package-name">-</h1>
+          <p id="package-meta" class="package-meta">-</p>
+        </section>
+
+        <dl id="stat-strip" class="stat-strip"></dl>
+
+        <section id="findings-list" class="findings-list"></section>
+      </section>
+
+      <section id="empty-state" class="empty-state">
+        <p class="empty-line">No APK loaded.</p>
+        <p class="empty-hint">Upload an APK to run the exposure-aware analysis.</p>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
